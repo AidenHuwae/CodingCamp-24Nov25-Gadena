@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel ="stylesheet" href="CSS/style.css"> 
+</head>
+<body>
+
+    <div class="container">
+        <h1>ToDo List</h1>
+
+        <div class="input-group">
+            <input type="text" id="task-input" placeholder="add new...">
+            <input type="date" id="date-input">
+            <button id="add-btn">+</button>
+        </div>
+        <small id="error-message"></small>
+        <div class="actions">
+            <select id="filter-todo">
+                <option value="all">ALL</option>
+                <option value="completed">Completed</option>
+                <option value="uncompleted">Uncompleted</option>
+            </select>
+            <button id="delete-all-btn">Delete all</button>
+        </div>
+
+        <div class="todo-container">
+            <table class="todo-table">
+                <thead>
+                    <tr>
+                        <th>Task</th>
+                        <th>Due Date</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="todo-list">
+
+                </tbody>
+            </table>
+
+            <div id="empty-message" style="display:none;">No task found</div>
+        </div>
+    </div>
+
+    <script src="JS/script.js"></script>
+    
+</body>
+</html>
