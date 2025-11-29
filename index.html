@@ -3,30 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel ="stylesheet" href="CSS/style.css"> 
+    <title>Todo List - Gadena Kristy H</title>
+    <link rel="stylesheet" href="CSS/style.css"> 
 </head>
 <body>
 
-    <div class="container">
-        <h2>To-Do-List <img src="Image/icon.png"></h2>
+    <main class="container">
+        <!-- bagian header -->
+        <header>
+            <h1>To-Do-List <img src="Image/icon.png" width="50px" alt="Todo Icon"></h1>
+        </header>
 
-        <div class="input-group">
-            <input type="text" id="task-input" placeholder="add new...">
-            <input type="date" id="date-input">
-            <button id="add-btn">+</button>
-        </div>
-        <small id="error-message"></small>
-        <div class="actions">
-            <select id="filter-todo">
+        <form class="input-group">
+            <input type="text" id="task-input" placeholder="type...." aria-label="Task Name" required>
+            <input type="date" id="date-input" aria-label="Due Date">
+            <button type="submit" id="add-btn">+</button>
+        </form>
+        
+        <small id="error-message" role="alert"></small>
+<!-- bagian section -->
+        <section class="actions" aria-label="Filter Controls">
+            <select id="filter-todo" aria-label="Filter Tasks">
                 <option value="all">ALL</option>
                 <option value="completed">Completed</option>
                 <option value="uncompleted">Uncompleted</option>
             </select>
             <button id="delete-all-btn">Delete all</button>
-        </div>
+        </section>
 
-       
+        <section class="todo-container" aria-label="Task List">
+            <table class="todo-table">
+                <thead>
+                    <tr>
+                        <th scope="col">Task</th>
+                        <th scope="col">Due Date</th>
+                        <th scope="col">Status</th>
+                        <th scope="col">Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="todo-list">
+                    </tbody>
+            </table>
+
+            <div id="empty-message" style="display:none;">No task found</div>
+        </section>
+
+    </main>
+<!-- footer -->
+    <footer>
+        <p>&copy; 2025 Gadena Kristy H. All rights reserved.</p>
+    </footer>
 
     <script src="JS/script.js"></script>
     
